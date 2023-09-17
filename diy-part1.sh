@@ -14,13 +14,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
+echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall;packages' >>feeds.conf.default
+echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall;luci' >>feeds.conf.default
+echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' >>feeds.conf.default
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo '### SSR helloworld ###'
-# echo "src-git oui https://github.com/zhaojh329/oui.git" >>feeds.conf.default
-# echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
-echo '### Argon Theme Config ###'
-
-git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
-echo '### Shutdown Router ###'
